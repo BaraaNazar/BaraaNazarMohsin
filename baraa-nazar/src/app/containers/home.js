@@ -38,23 +38,37 @@ function Home() {
           <div>projects</div>
           <div>contact</div>
         </div>
-        <div className='md:text-9xl md:p-20 md:mt-16 md:ml-40 text-left text-5xl mt-10 ml-10'>
+        <div className='md:text-9xl md:p-20 md:mt-16 md:ml-40 text-left text-5xl mt-10 ml-10 w-fit'>
           <motion.div 
+          
+          initial={{x:-500, opacity:0, y:-500}}
+          animate={{x:0,opacity:1, y:0}}
+
           whileHover={{
             translateX: "50px",
             originX: 0,
             color: "red",
             }}
           transition={{type: "linear", stiffness: 500}}
+
             onMouseEnter={handleMouseEnterAbout} onMouseLeave={handleMouseLeaveAbout}>{aboutHover?<div>About</div>:<div>Hello.</div> }</motion.div>
-          <motion.div whileHover={{
+          <motion.div
+            initial={{x:-500, opacity:0, y:0}}
+            animate={{x:0,opacity:1}}
+
+          whileHover={{
             translateX: "50px",
             originX: 0,
             color: "red",
             }}
+
             transition={{type: "linear", stiffness: 500}}
             onMouseEnter={handleMouseEnterProjects} onMouseLeave={handleMouseLeaveProjects}>{projectsHover?<div>Projects</div>:<div className='text-[#c1ad8c]'>I am</div> }</motion.div>
-          <motion.div whileHover={{
+          <motion.div 
+            initial={{y:-500, opacity:0, x:0}}
+            animate={{y:0,opacity:1}}
+            
+            whileHover={{
             translateX: "50px",
             originX: 0,
             color: "red",
