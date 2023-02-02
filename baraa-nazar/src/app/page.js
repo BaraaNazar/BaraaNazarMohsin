@@ -5,7 +5,7 @@ import About from './containers/about.js'
 
 export default function App() {
   return (
-    <main className='h-screen w-screen text-white flex'>
+    <main className='h-screen w-screen flex bg-black'>
       <Home/>
       <About/>
       <Contact/>
