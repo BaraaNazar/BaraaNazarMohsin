@@ -31,7 +31,11 @@ function Home() {
 
 
   return (
-    <div className='flex flex-col justify-start h-screen w-screen text-[#c1ad8c] font-bold font-sans bg-black md:bg-[url("https://a-static.besthdwallpaper.com/animated-spider-man-showen-over-black-background-wallpaper-2560x1600-95899_7.jpg")]'>
+    <motion.div
+    initial={{scale:1.5}}
+    animate={{scale:1}}
+    transition={{delay:0.5, duration:0.1}}
+     className='flex flex-col justify-start h-screen w-screen text-[#c1ad8c] font-bold font-sans bg-black md:bg-[url("https://a-static.besthdwallpaper.com/animated-spider-man-showen-over-black-background-wallpaper-2560x1600-95899_7.jpg")]'>
         <div className='md:hidden flex space-x-10 m-2 capitalize font-sans'>
           <div>home</div>
           <div>about</div>
@@ -79,7 +83,7 @@ function Home() {
         <div className='md:hidden flex'>
           <img src='https://i.pinimg.com/originals/06/60/ef/0660efe82fa3da42ed56eef013171835.gif' alt='Loading...'/>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
