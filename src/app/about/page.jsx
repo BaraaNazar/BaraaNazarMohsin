@@ -31,14 +31,14 @@ function About() {
           </Link>
         </motion.div>
         <motion.div
-          className="text-7xl flex justify-start pl-20 pt-32 capitalize"
+          className="md:text-7xl flex pl-10 pt-60 capitalize text-5xl"
           initial={{ x: -500, opacity: 0, y: -500 }}
           animate={{ x: 0, opacity: 1, y: 0 }}
           transition={{ type: "linear", stiffness: 500 }}
         >
           I build & test websites remotely
         </motion.div>
-        <div className="relative mt-96">
+        <div className="relative mt-auto">
           <div class="scroll-down p-2"></div>
         </div>
       </motion.div>
@@ -46,12 +46,12 @@ function About() {
       <div className="flex flex-col items-center w-screen">
         <div className="w-full flex justify-end p-10">
           <Image
-            className="w-1/2 h-96 rounded-xl"
+            className="w-screen h-1/2 rounded-xl"
             src={imagefromnet}
             alt="my-about-photo"
           />
         </div>
-        <div className="w-1/2 flex flex-col items-left">
+        <div className="md:w-1/2 w-screen flex flex-col items-left">
           <div className="font-bold text-4xl capitalize p-5">about</div>
           <div className="text-lg p-5">
             As a seasoned Front-End Developer, I bring a wealth of experience
