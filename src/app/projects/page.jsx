@@ -47,7 +47,7 @@ function Projects() {
 
       <div className="flex flex-col items-center w-screen">
         <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex h-screen">
+          <div className="flex md:flex-row flex-col h-screen">
             <div className="flex flex-col">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 RefuBook
@@ -104,7 +104,7 @@ function Projects() {
       </div>
       <div className="flex flex-col items-center w-screen">
         <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex h-screen">
+          <div className="flex md:h-screen h-fit md:flex-row flex-col">
             <div className="flex flex-col">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 Muggles
@@ -165,7 +165,7 @@ function Projects() {
       </div>
       <div className="flex flex-col items-center w-screen">
         <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex h-fit">
+          <div className="flex h-fit md:flex-row flex-col">
             <div className="flex flex-col">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 Cross Road Restaurant
