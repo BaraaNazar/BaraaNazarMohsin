@@ -62,7 +62,7 @@ function Projects() {
               </div>
             </div>
             <Image
-              className="w-fit h-96 p-2 hover:scale-150"
+              className="w-fit h-96 p-2 hover:scale-150 ease-in-out duration-300"
               src={refubook}
             ></Image>
             <motion.div
@@ -126,7 +126,7 @@ function Projects() {
               </div>
             </div>
             <Image
-              className="w-fit h-96 p-2 hover:scale-150"
+              className="w-fit h-96 p-2 hover:scale-150 ease-in-out duration-300"
               src={movieProject}
             ></Image>
             <motion.div
@@ -186,7 +186,7 @@ function Projects() {
                 culture, this website has everything you need to know.
               </div>
               <Image
-                className="w-fit h-96 p-2 hover:scale-150"
+                className="w-fit h-96 p-2 hover:scale-150 ease-in-out duration-300"
                 src={crossRoadRestaurant}
               ></Image>
             </div>
@@ -250,7 +250,7 @@ function Projects() {
                 and entertainment.
               </div>
               <Image
-                className="w-fit h-96 p-2 hover:scale-150"
+                className="w-fit h-96 p-2 hover:scale-150 ease-in-out duration-300"
                 src={madLibs}
               ></Image>
             </div>
