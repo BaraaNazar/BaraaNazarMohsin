@@ -33,6 +33,10 @@ function Home() {
     setContactHover(false);
   };
 
+  const [isShow, setIsShow] = useState(true);
+  const handleIsShow = () => {
+    setIsShow(!isShow);
+  };
   return (
     <motion.div
       initial={{ scale: 1.05 }}
@@ -40,65 +44,116 @@ function Home() {
       transition={{ delay: 0.5, duration: 0.5 }}
       className="flex justify-start h-screen w-screen text-white font-bold font-san"
     >
-      <div className="flex flex-col xl:text-9xl xl:p-20 xl:mt-16 xl:ml-40 text-left md:text-9xl text-6xl mt-32 ml-6 z-20">
-        <motion.div
-          initial={{ x: -500, opacity: 0, y: -500 }}
-          animate={{ x: 0, opacity: 1, y: 0 }}
-          whileHover={{
-            translateX: "30px",
-            originX: 0,
-          }}
-          transition={{ type: "linear", stiffness: 500 }}
-          onMouseEnter={handleMouseEnterAbout}
-          onMouseLeave={handleMouseLeaveAbout}
-        >
-          {aboutHover ? (
+      {isShow ? (
+        <div className="flex flex-col xl:text-9xl xl:p-20 xl:mt-16 xl:ml-40 text-left md:text-9xl text-6xl mt-32 ml-6 z-20">
+          <motion.div
+            initial={{ x: -500, opacity: 0, y: -500 }}
+            animate={{ x: 0, opacity: 1, y: 0 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterAbout}
+            onMouseLeave={handleMouseLeaveAbout}
+          >
+            {aboutHover ? (
+              <Link classname="pointer" href="/about">
+                About
+              </Link>
+            ) : (
+              <div>Hello.</div>
+            )}
+          </motion.div>
+          <motion.div
+            initial={{ x: -500, opacity: 0, y: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterProjects}
+            onMouseLeave={handleMouseLeaveProjects}
+          >
+            {projectsHover ? (
+              <Link classname="pointer" href="/projects">
+                Projects
+              </Link>
+            ) : (
+              <div className="text-white">I am</div>
+            )}
+          </motion.div>
+          <motion.div
+            initial={{ y: -500, opacity: 0, x: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterContact}
+            onMouseLeave={handleMouseLeaveContact}
+          >
+            {contactHover ? (
+              <Link classname="pointer text-red-600" href="/contact">
+                Contact
+              </Link>
+            ) : (
+              <div className="text-red-600">Baraa</div>
+            )}
+          </motion.div>
+        </div>
+      ) : (
+        <div className="flex flex-col xl:text-9xl xl:p-20 xl:mt-16 xl:ml-40 text-left md:text-9xl text-6xl mt-32 ml-6 z-20">
+          <motion.div
+            initial={{ x: -500, opacity: 0, y: -500 }}
+            animate={{ x: 0, opacity: 1, y: 0 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterAbout}
+            onMouseLeave={handleMouseLeaveAbout}
+          >
             <Link classname="pointer" href="/about">
               About
             </Link>
-          ) : (
-            <div>Hello.</div>
-          )}
-        </motion.div>
-        <motion.div
-          initial={{ x: -500, opacity: 0, y: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          whileHover={{
-            translateX: "30px",
-            originX: 0,
-          }}
-          transition={{ type: "linear", stiffness: 500 }}
-          onMouseEnter={handleMouseEnterProjects}
-          onMouseLeave={handleMouseLeaveProjects}
-        >
-          {projectsHover ? (
+          </motion.div>
+          <motion.div
+            initial={{ x: -500, opacity: 0, y: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterProjects}
+            onMouseLeave={handleMouseLeaveProjects}
+          >
             <Link classname="pointer" href="/projects">
               Projects
             </Link>
-          ) : (
-            <div className="text-white">I am</div>
-          )}
-        </motion.div>
-        <motion.div
-          initial={{ y: -500, opacity: 0, x: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          whileHover={{
-            translateX: "30px",
-            originX: 0,
-          }}
-          transition={{ type: "linear", stiffness: 500 }}
-          onMouseEnter={handleMouseEnterContact}
-          onMouseLeave={handleMouseLeaveContact}
-        >
-          {contactHover ? (
-            <Link classname="pointer" href="/contact">
+          </motion.div>
+          <motion.div
+            initial={{ y: -500, opacity: 0, x: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            whileHover={{
+              translateX: "30px",
+              originX: 0,
+              color: "red",
+            }}
+            transition={{ type: "linear", stiffness: 500 }}
+            onMouseEnter={handleMouseEnterContact}
+            onMouseLeave={handleMouseLeaveContact}
+          >
+            <Link classname="pointer text-red-600" href="/contact">
               Contact
             </Link>
-          ) : (
-            <div className="text-red-600">Baraa</div>
-          )}
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      )}
       <Image
         className="absolute z-10 w-fit lg:ml-96 xl:scale-100 xl:flex hidden"
         src={myPhoto}
@@ -106,11 +161,17 @@ function Home() {
         width={700}
       />
       <Image
-        className="absolute h-screen w-screen z-10 pl-16 xl:hidden flex"
+        onClick={handleIsShow}
+        className="absolute h-screen w-screen pl-16 xl:hidden flex"
         src={myPhotoZoomed}
         alt="myPhoto"
         width={"500px"}
       />
+      <div className="absolute bottom-10 text-center w-screen">
+        <div class="z-10 flex items-end justify-center text-center capitalize md:hidden text-sm p-5 animate-pulse text-red-600">
+          Tap anywhere!
+        </div>
+      </div>
     </motion.div>
   );
 }
