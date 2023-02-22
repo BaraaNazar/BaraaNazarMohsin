@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import myPhoto from "../../../public/images/man-photo.png";
-import myPhotoZoomed from "../../../public/images/man-photo-zoomed.jpeg";
+import myPhoto from "../../../public/images/rear-view-programmer-working-all-night-long.jpg";
+import myPhotoZoomed from "../../../public/images/rear-view-programmer-working-all-night-long.jpg";
 // import {NavLink} from "react-router-dom"
 
 function Home() {
@@ -158,14 +158,16 @@ function Home() {
         className="absolute z-10 w-fit lg:ml-96 xl:scale-100 xl:flex hidden"
         src={myPhoto}
         alt="myPhoto"
-        width={700}
+        layout="fill"
+        objectFit="cover"
       />
       <Image
         onClick={handleIsShow}
         className="absolute h-screen w-screen pl-16 xl:hidden flex"
         src={myPhotoZoomed}
         alt="myPhoto"
-        width={"500px"}
+        layout="fill"
+        objectFit="cover"
       />
       <div className="absolute bottom-10 text-center w-screen">
         <div class="z-10 flex items-end justify-center text-center capitalize md:hidden text-sm p-5 animate-pulse text-red-600">
