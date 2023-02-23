@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import imagefromnet from "../../../public/images/people-working-office.jpg";
-import myaboutphoto from "../../../public/images/my-about-photo.png";
 
 function About() {
   return (
