@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import myPhoto from "../../../public/images/software-developer-programming-firewall-security-multiple-monitors-learning-new-user-interface-developing-application-cloud-server-with-binary-code-html-script-terminal-window.jpg";
+import myPhoto from "../../../public/images/closeup-programer-hands-typing-machine-learning-code-laptop-keyboard-front-computer-screens-with-programming-interface-system-engineer-writing-algorithm-online-cloud-computing.jpg";
 import myPhotoZoomed from "../../../public/images/software-developer-programming-firewall-security-multiple-monitors-learning-new-user-interface-developing-application-cloud-server-with-binary-code-html-script-terminal-window.jpg";
 // import {NavLink} from "react-router-dom"
 
@@ -155,7 +155,7 @@ function Home() {
         </div>
       )}
       <Image
-        className="absolute z-10 w-full lg:ml-96 xl:scale-100 xl:flex hidden"
+        className="absolute z-10 w-screen h-screen overflow-hidden lg:ml-96 xl:scale-100 xl:flex hidden"
         src={myPhoto}
         alt="myPhoto"
         layout="fill"

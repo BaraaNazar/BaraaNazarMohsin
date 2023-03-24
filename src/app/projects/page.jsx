@@ -1,5 +1,6 @@
 "use client";
 // import Image from 'next/image'
+import React, {useRef, useEffect} from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,13 +10,22 @@ import crossRoadRestaurant from "../../../public/images/Cross-Road-Restaurant.pn
 import madLibs from "../../../public/images/Mad-libs.png";
 
 function Projects() {
+  const dummy = useRef(null);
+
+useEffect(() => {
+  setTimeout(() => {
+    dummy.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, 2000);
+}, []);
   return (
-    <div className="flex flex-col">
+    <div className="flex lg:flex-row flex-col w-screen h-screen lg:overflow-x-scroll">
       <motion.div
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="w-screen h-screen flex flex-col font-bold font-sans"
+        className="w-screen h-screen flex lg:flex-row flex-col font-bold font-sans"
       >
         <motion.div
           className="flex justify-end ml-10 mt-10 fixed items-end right-10"
@@ -33,22 +43,30 @@ function Projects() {
           </Link>
         </motion.div>
         <motion.div
-          className="md:text-7xl flex pl-10 pt-60 capitalize text-5xl"
+          className="md:text-7xl flex pl-10 pt-60 capitalize text-5xl w-screen h-screen"
           initial={{ x: -500, opacity: 0, y: -500 }}
           animate={{ x: 0, opacity: 1, y: 0 }}
           transition={{ type: "linear", stiffness: 500 }}
         >
           See my Projects with Demos & code
         </motion.div>
-        <div className="relative mt-auto">
-          <div class="scroll-down p-2"></div>
-        </div>
+        <div className="relative mt-auto w-1/4 h-screen justify-center items-center -z-50 hidden lg:flex">
+          <div className="scroll-down"></div>
+          <div className="scroll-down animate-pulse"></div>
+          <div className="scroll-down animate-spin"></div>
+          <div className="scroll-down animate-pulse"></div>
+          <div className="scroll-down animate-spin"></div>
+          <div className="scroll-down animate-pulse"></div>
+          <div className="scroll-down animate-spin"></div>
+          <div className="scroll-down animate-pulse"></div>
+          <div className="scroll-down animate-spin"></div>
+          </div>
       </motion.div>
 
-      <div className="flex flex-col items-center w-screen">
-        <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex md:flex-row flex-col h-screen">
-            <div className="flex flex-col">
+      <div className="flex lg:flex-row flex-col items-center w-screen">
+        <div className="md:w-1/2 w-screen flex lg:flex-row flex-col items-left">
+          <div className="flex md:flex-row lg:flex-row flex-col h-fit w-screen">
+            <div className="flex flex-col ">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 RefuBook
               </div>
@@ -102,10 +120,11 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center w-screen">
-        <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex md:h-screen h-fit md:flex-row flex-col">
-            <div className="flex flex-col">
+      <div ref={dummy} />
+      <div className="flex lg:flex-row flex-col items-center w-screen">
+        <div className="md:w-1/2 w-screen flex lg:flex-row flex-col items-left">
+          <div className="flex h-fit  lg:flex-row flex-col w-screen">
+            <div className=" flex-col flex">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 Muggles
               </div>
@@ -163,9 +182,9 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center w-screen">
-        <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex h-fit md:flex-row flex-col">
+      <div className="flex lg:flex-row flex-col items-center w-screen">
+        <div className="md:w-1/2 w-screen flex lg:flex-row flex-col items-left">
+          <div className="flex h-fit lg:flex-row flex-col w-screen">
             <div className="flex flex-col">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 Cross Road Restaurant
@@ -185,11 +204,11 @@ function Projects() {
                 about the menu, or simply get a glimpse into the restaurant's
                 culture, this website has everything you need to know.
               </div>
+            </div>
               <Image
                 className="w-fit h-96 p-2 hover:scale-150 ease-in-out duration-300"
                 src={crossRoadRestaurant}
               ></Image>
-            </div>
             <motion.div
               className="text-red-500 text-lg p-5 cursor-pointer font-bold"
               initial={{ x: 500, opacity: 0 }}
@@ -227,9 +246,9 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center w-screen">
-        <div className="md:w-1/2 w-screen flex flex-col items-left">
-          <div className="flex md:flex-row flex-col h-screen">
+      <div className="flex lg:flex-row flex-col items-center w-screen">
+        <div className="md:w-1/2 w-screen flex lg:flex-row flex-col items-left">
+          <div className="flex lg:flex-row flex-col w-screen h-screen">
             <div className="flex flex-col">
               <div className="font-semibold text-white decoration-indigo-500 text-xl p-2">
                 Mad Libs

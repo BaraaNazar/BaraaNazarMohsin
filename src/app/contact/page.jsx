@@ -1,16 +1,22 @@
 "use client";
 // import Image from 'next/image'
+import React, {useRef, useEffect} from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 function Contact() {
+  const dummy = useRef(null);
+  useEffect(() => {
+    setTimeout(()=>{    dummy.current.scrollIntoView({ behavior: "smooth" });
+  },2000)
+  }, []);
   return (
-    <div className="flex flex-col">
+    <div className="flex lg:flex-row flex-col">
       <motion.div
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="w-screen h-screen flex flex-col font-bold font-sans"
+        className="w-screen h-screen flex lg:flex-row flex-col font-bold font-sans"
       >
         <motion.div
           className="flex justify-end ml-10 mt-10 fixed items-end right-10"
@@ -28,37 +34,37 @@ function Contact() {
           </Link>
         </motion.div>
         <motion.div
-          className="md:text-7xl flex pl-10 pt-60 capitalize text-5xl"
+          className="md:text-7xl flex pl-10 pt-60 capitalize text-5xl w-screen"
           initial={{ x: -500, opacity: 0, y: -500 }}
           animate={{ x: 0, opacity: 1, y: 0 }}
           transition={{ type: "linear", stiffness: 500 }}
         >
           Get in touch & Chat with me
         </motion.div>
-        <div className="relative mt-auto">
-          <div class="scroll-down p-2"></div>
-        </div>
+        <div className="relative mt-auto w-1/4 h-screen justify-center items-center -z-50 hidden lg:flex">
+          <div class="scroll-down"></div>
+          <div class="scroll-down animate-pulse "></div>
+          <div class="scroll-down animate-spin"></div>
+          <div class="scroll-down animate-pulse"></div>
+          <div class="scroll-down animate-spin"></div>
+          <div class="scroll-down animate-spin"></div>
+          </div>
       </motion.div>
-
-      <div className="flex flex-col items-center w-screen">
-        <div className="md:w-1/2 w-screen flex flex-col items-left">
+      <div className="flex lg:flex-row flex-col items-center w-screen">
+        <div className="md:w-1/2 w-screen flex h-screen flex-col items-left">
           <div className="font-bold text-4xl capitalize p-5">Contact</div>
-          <div className="text-lg p-5">
+          <div className="text-lg p-5 w-screen">
             My expertise encompasses a range of front-end technologies and I am
             skilled in creating responsive and user-friendly websites and
             applications that meet the highest standards of quality and
             performance. In addition to my technical abilities, I am a strong
             communicator and problem-solver, with a focus on delivering
             exceptional customer service.
-          </div>
-          <div className="text-lg p-5">
             If you would like to learn more about my experience and
             qualifications, please feel free to review my LinkedIn profile. I am
             confident that I have the skills and experience to deliver
             outstanding results and make a positive impact to any project I am a
             part of.
-          </div>
-          <div className="text-lg p-5">
             If you would like to get in touch, please don't hesitate to reach
             out via the form below or email me. I would be happy to hear from
             you and discuss any potential opportunities.
@@ -110,10 +116,11 @@ function Contact() {
           </motion.div>
         </div>
       </div>
+      <div ref={dummy} />
       <motion.div
       initial={{ x: 500, opacity: 0 }}
       animate={{ x: 0, opacity: 1, y: 0 }}
-       className="flex justify-center items-center w-screen h-fit">
+       className="flex justify-center items-center w-screen h-screen text-center m-auto">
       <div
   className="block max-w-md rounded-lg bg-black p-6 shadow-lg dark:bg-neutral-700 border-red-600 hover:border-2">
   <form>
