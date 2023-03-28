@@ -104,7 +104,7 @@ function About() {
             transition={{ type: "linear", stiffness: 500 }}
           >
             <Link
-              href="https://drive.google.com/file/d/14Hh4ImG5BSS4rt6uY7l2ipuBUDHUz0BB/view?usp=sharing"
+              href="https://drive.google.com/file/d/15xsU6ldEF96bVvfI3zN21v4IT-z8pWCF/view?usp=sharing"
               target="_blank"
             >
               My resume (pdf 35 KB)
