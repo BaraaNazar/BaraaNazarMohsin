@@ -8,17 +8,18 @@
   bottom: 10px;
   display: block;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
   text-decoration: none;
   text-shadow: 0;
   width: 20px;
   height: 20px;
+  background-color: transparent;
   border-top: 2px solid rgb(255, 0, 0);
   border-right: 2px solid rgb(255, 0, 0);
   left: 50%;
-  -webkit-transform: translate(-50%, 0%) rotate(45deg);
-  -moz-transform: translate(-50%, 0%) rotate(45deg);
-  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-transform: translate(-50%, 0%) rotate(135deg);
+  -moz-transform: translate(-50%, 0%) rotate(135deg);
+  transform: rotate(135deg);
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation: fade_move_down 4s ease-in-out infinite;
   animation: fade_move_down 4s ease-in-out infinite;
@@ -26,40 +27,45 @@
 
 @-webkit-keyframes fade_move_down {
   0% {
-    -webkit-transform: translate(0, -10px) rotate(45deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(0, 10px) rotate(45deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
     opacity: 0;
   }
 }
 @-moz-keyframes fade_move_down {
   0% {
-    -moz-transform: translate(0, -10px) rotate(45deg);
+    -moz-transform: translate(0, 0) rotate(135deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    -moz-transform: translate(0, 10px) rotate(45deg);
+    -moz-transform: translate(0, 0) rotate(135deg);
     opacity: 0;
   }
 }
 @keyframes fade_move_down {
   0% {
-    transform: translate(-10px, 0px) rotate(45deg);
-    opacity: 0;
+    transform: translate(0, 0) rotate(135deg);
+    opacity: 1;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0); /* set initial shadow to transparent */
   }
   50% {
     opacity: 1;
+    box-shadow: 10px 0px 30px rgba(255, 0, 0, 1); /* set shadow color and opacity */
+    background-color: rgba(255, 0, 0, 0.2) ;
   }
   100% {
-    transform: translate(100px,0) rotate(45deg);
-    opacity: 0;
+    transform: translate(0, 0) rotate(135deg);
+    opacity: 1;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0); /* set final shadow to transparent */
   }
 }
+

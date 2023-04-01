@@ -117,7 +117,7 @@ function Home() {
             onMouseEnter={handleMouseEnterAbout}
             onMouseLeave={handleMouseLeaveAbout}
           >
-            <Link classname="pointer" href="/about">
+            <Link className="pointer" href="/about">
               About
             </Link>
           </motion.div>
@@ -132,7 +132,7 @@ function Home() {
             onMouseEnter={handleMouseEnterProjects}
             onMouseLeave={handleMouseLeaveProjects}
           >
-            <Link classname="pointer" href="/projects">
+            <Link className="pointer" href="/projects">
               Projects
             </Link>
           </motion.div>
@@ -148,7 +148,7 @@ function Home() {
             onMouseEnter={handleMouseEnterContact}
             onMouseLeave={handleMouseLeaveContact}
           >
-            <Link classname="pointer text-red-600" href="/contact">
+            <Link className="pointer text-red-600" href="/contact">
               Contact
             </Link>
           </motion.div>
