@@ -12,13 +12,20 @@ function About() {
     setTimeout(()=>{    dummy.current.scrollIntoView({ behavior: "smooth" });
   },2000)
   }, []);
+  const handleClickScroll = () => {
+    const element = document.getElementById('about');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
-    <div className="flex lg:flex-row flex-col h-screen w-screen lg:overflow-x-scroll">
+    <div className="flex flex-col h-screen w-screen lg:overflow-x-scroll">
       <motion.div
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="w-screen h-screen flex lg:flex-row flex-col font-bold font-sans"
+        className="w-screen h-screen flex flex-col font-bold font-sans"
       >
         <motion.div
           className="flex justify-end ml-10 mt-10 fixed items-end right-10 "
@@ -43,12 +50,8 @@ function About() {
         >
           I build & test websites remotely
         </motion.div>
-        <div className="relative mt-auto w-1/4 h-screen justify-center items-center -z-50 hidden lg:flex">
-          <div class="scroll-down"></div>
-          <div class="scroll-down animate-pulse "></div>
-          <div class="scroll-down animate-spin"></div>
-          <div class="scroll-down animate-pulse"></div>
-          <div class="scroll-down animate-spin"></div>
+        <div className="relative h-1/2 w-screen justify-center items-center hidden lg:flex">
+          <button type="button" onClick={handleClickScroll } className="scroll-down cursor-pointer"></button>
           </div>
       </motion.div>
 
@@ -112,7 +115,7 @@ function About() {
           </motion.div>
         </div>
       </div>
-      <div ref={dummy} />
+      <div id="about" ref={dummy} />
     </div>
   );
 }
