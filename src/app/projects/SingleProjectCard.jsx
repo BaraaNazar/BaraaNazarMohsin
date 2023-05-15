@@ -5,8 +5,8 @@ import Link from 'next/link'
 function SingleProjectCard(props) {
   return (
     <div className="my-8 rounded shadow-md shadow-gray-900  bg-gray-800 duration-300 hover:-translate-y-1">  
-    <div className="max-w-sm rounded overflow-hidden shadow-2xl ">
-      <Image objectFit='contain' className='rounded-t rounded-b-none lg:w-fit lg:h-40 h-fit w-fit' width="500" height="500"  src={props.image} alt="Mountain"/>
+    <div className="max-w-sm rounded overflow-hidden shadow-2xl justify-center items-center flex flex-col">
+      <Image objectFit='fill' className='md:m-2 rounded-t rounded-b-none lg:w-fit lg:h-40 h-fit w-fit' width="500" height="500"  src={props.image} alt="Mountain"/>
       <div className="px-6 py-4">
         <div className="text-lg mb-4 font-bold leading-relaxed text-gray-300">{props.name}</div>
         <p className="leading-5 text-gray-400 lg:h-48 h-full w-fit">
