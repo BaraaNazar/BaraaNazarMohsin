@@ -9,7 +9,7 @@ function SingleProjectCard(props) {
       <Image objectFit='fill' className='md:m-2 rounded-t rounded-b-none lg:w-fit lg:h-40 h-fit w-fit' width="500" height="500"  src={props.image} alt="Mountain"/>
       <div className="px-6 py-4">
         <div className="text-lg mb-4 font-bold leading-relaxed text-gray-300">{props.name}</div>
-        <p className="leading-5 text-gray-400 lg:h-48 h-full w-fit text-base">
+        <p className="leading-5 text-gray-400 lg:h-48 h-full w-fit text-sm">
         {props.content}
         </p>
       </div>
