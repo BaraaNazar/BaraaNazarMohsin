@@ -10,6 +10,7 @@ import crossRoadRestaurant from "public/images/Cross-Road-Restaurant.png";
 import madLibs from "public/images/Mad-libs.png";
 import talebAlelm from "public/images/talebalelm.png";
 import SingleProjectCard from "./SingleProjectCard";
+import TodoImg from "public/images/todolist.png";
 import ExpenseCalculator from "public/images/screencapture-expeses-calculator-vercel-app-2023-07-10-15_03_19.png";
 
 function Projects() {
@@ -97,6 +98,15 @@ function Projects() {
           code={"https://github.com/BaraaNazar/RefuBook"}
           content={
             "This website will be able to help refugees wherever they are.Information will be separated by country and users will be able to create their own account and share their own personal experiences and knowledge on how to find a job, rent a house, buy or sell things you might need, or how to join events happening in the community."
+          }
+        />
+        <SingleProjectCard
+          name={"Todo App"}
+          demo={"https://todo-list-eta-henna.vercel.app/"}
+          image={TodoImg}
+          code={"https://github.com/BaraaNazar/ToDoListApp"}
+          content={
+            "Introducing our simple Todo List app. Input and delete tasks effortlessly. Stay organized and focused. Get things done with ease. Try it now!"
           }
         />
         <SingleProjectCard
