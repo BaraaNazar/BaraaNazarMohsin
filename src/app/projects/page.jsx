@@ -10,7 +10,7 @@ import crossRoadRestaurant from "public/images/Cross-Road-Restaurant.png";
 import madLibs from "public/images/Mad-libs.png";
 import talebAlelm from "public/images/talebalelm.png";
 import SingleProjectCard from "./SingleProjectCard";
-import TodoImg from "public/images/todolist.png";
+import TodoImg from "../../../public/images/todoListImg.png";
 import ExpenseCalculator from "public/images/screencapture-expeses-calculator-vercel-app-2023-07-10-15_03_19.png";
 
 function Projects() {
