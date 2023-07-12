@@ -4,20 +4,20 @@ import Link from "next/link";
 
 function SingleProjectCard(props) {
   return (
-    <div className="my-8 rounded shadow-md shadow-gray-900  bg-gray-800 duration-300 hover:-translate-y-1">
+    <div className="my-8 rounded  duration-300 hover:-translate-y-1">
       <div className="max-w-sm rounded overflow-hidden shadow-2xl justify-center items-center flex flex-col">
         <Image
-          className="rounded-t rounded-b-none h-fit w-fit"
+          className="rounded-t rounded-b-none lg:h-52 h-auto w-full"
           width="500"
           height="500"
           src={props.image}
           alt="Mountain"
         />
         <div className="px-6 py-4">
-          <div className="text-lg mb-4 font-bold leading-relaxed text-gray-300">
+          <div className="text-lg mb-4 font-bold leading-relaxed text-white">
             {props.name}
           </div>
-          <p className="leading-5 text-gray-400 lg:h-48 h-full w-fit text-sm">
+          <p className="leading-5 text-white lg:h-48 text-sm">
             {props.content}
           </p>
         </div>

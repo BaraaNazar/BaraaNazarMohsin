@@ -3,13 +3,13 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import SingleProjectCard from "./SingleProjectCard";
+import Gallery from "./Gallary";
 import refubook from "public/images/RefuBook.png";
 import movieProject from "public/images/movie-project.png";
 import crossRoadRestaurant from "public/images/Cross-Road-Restaurant.png";
 import madLibs from "public/images/Mad-libs.png";
 import talebAlelm from "public/images/talebalelm.png";
-import SingleProjectCard from "./SingleProjectCard";
 import TodoImg from "../../../public/images/todoListImg.png";
 import ExpenseCalculator from "public/images/screencapture-expeses-calculator-vercel-app-2023-07-10-15_03_19.png";
 
@@ -137,6 +137,7 @@ function Projects() {
           }
         />
       </div>
+      <Gallery />
     </div>
   );
 }
