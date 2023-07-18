@@ -11,6 +11,7 @@ import crossRoadRestaurant from "public/images/Cross-Road-Restaurant.png";
 import madLibs from "public/images/Mad-libs.png";
 import talebAlelm from "public/images/talebalelm.png";
 import TodoImg from "../../../public/images/todoListImg.png";
+import InvestmentApp from "../../../public/images/InvestmentApp.png";
 import ExpenseCalculator from "public/images/screencapture-expeses-calculator-vercel-app-2023-07-10-15_03_19.png";
 
 function Projects() {
@@ -107,6 +108,15 @@ function Projects() {
           code={"https://github.com/BaraaNazar/ToDoListApp"}
           content={
             "Introducing our simple Todo List app. Input and delete tasks effortlessly. Stay organized and focused. Get things done with ease. Try it now!"
+          }
+        />
+        <SingleProjectCard
+          name={"Investment app"}
+          demo={"https://investment-app-nine.vercel.app/"}
+          image={InvestmentApp}
+          code={"https://github.com/BaraaNazar/InvestmentApp"}
+          content={
+            "Introducing the all-in-one Investment App! Stay on top of your finances effortlessly with our user-friendly interface. Track your CURRENT SAVINGS ($), plan ahead with YEARLY SAVINGS ($), and make informed decisions with EXPECTED INTEREST (% per year). Try it now!"
           }
         />
         <SingleProjectCard
