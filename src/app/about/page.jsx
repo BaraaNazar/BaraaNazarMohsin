@@ -1,6 +1,6 @@
 "use client";
 // import Image from 'next/image'
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,14 +9,15 @@ import imagefromnet from "../../../public/images/people-working-office.jpg";
 function About() {
   const dummy = useRef(null);
   useEffect(() => {
-    setTimeout(()=>{    dummy.current.scrollIntoView({ behavior: "smooth" });
-  },2000)
+    setTimeout(() => {
+      dummy.current.scrollIntoView({ behavior: "smooth" });
+    }, 2000);
   }, []);
   const handleClickScroll = () => {
-    const element = document.getElementById('about');
+    const element = document.getElementById("about");
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -51,8 +52,12 @@ function About() {
           I build & test websites remotely
         </motion.div>
         <div className="relative h-1/2 w-screen justify-center items-center hidden lg:flex">
-          <button type="button" onClick={handleClickScroll } className="scroll-down cursor-pointer"></button>
-          </div>
+          <button
+            type="button"
+            onClick={handleClickScroll}
+            className="scroll-down cursor-pointer"
+          ></button>
+        </div>
       </motion.div>
 
       <div className="flex lg:flex-row flex-col items-center">
@@ -64,29 +69,28 @@ function About() {
             the table. My expertise in Next.js, React, JavaScript, CSS,
             Tailwind, and HTML allows me to deliver high-quality and visually
             appealing projects that meet the needs and expectations of my
-            clients.
-            I have a strong understanding of the latest web technologies and
-            design trends, and I use this knowledge to create web pages that are
-            not only beautiful but also performant and accessible. My
-            proficiency in React allows me to build highly responsive and
-            scalable web applications, while my use of CSS frameworks such as
-            Tailwind helps me ensure that my designs are consistent and
-            user-friendly.
+            clients. I have a strong understanding of the latest web
+            technologies and design trends, and I use this knowledge to create
+            web pages that are not only beautiful but also performant and
+            accessible. My proficiency in React allows me to build highly
+            responsive and scalable web applications, while my use of CSS
+            frameworks such as Tailwind helps me ensure that my designs are
+            consistent and user-friendly.
           </div>
           <div className="text-lg p-5 w-screen">
-          In addition to my hands-on experience, I have also completed a
+            In addition to my hands-on experience, I have also completed a
             300-hour Front-End Bootcamp, where I honed my skills and learned
             from industry experts. This program allowed me to gain a deeper
             understanding of the front-end development process, from design to
             deployment. It was also an opportunity for me to practice my skills
             and work on real-world projects, helping me to gain the confidence
-            and expertise I need to succeed as a front-end developer.
-            In my work, I always strive to strike a balance between form and
-            function. I understand that the look of a web page is just as
-            important as its functionality, and I work hard to ensure that my
-            projects are both aesthetically pleasing and practical. Whether I am
-            working on a simple website or a complex web application, I bring my
-            full attention and expertise to each project to ensure that it is
+            and expertise I need to succeed as a front-end developer. In my
+            work, I always strive to strike a balance between form and function.
+            I understand that the look of a web page is just as important as its
+            functionality, and I work hard to ensure that my projects are both
+            aesthetically pleasing and practical. Whether I am working on a
+            simple website or a complex web application, I bring my full
+            attention and expertise to each project to ensure that it is
             delivered on time, on budget, and to the highest standards.
           </div>
           <div className="text-lg p-5 w-screen">
@@ -107,10 +111,10 @@ function About() {
             transition={{ type: "linear", stiffness: 500 }}
           >
             <Link
-              href="https://www.canva.com/design/DAFhCO45V9c/XK_Sh4-dvIgJluPI6vpiWA/edit?utm_content=DAFhCO45V9c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              href="https://www.canva.com/design/DAFhCO45V9c/bQChSDnHe3LZny3Mc1zVdw/view?utm_content=DAFhCO45V9c&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
               target="_blank"
             >
-              My resume (pdf 35 KB)
+              My resume (On Canva)
             </Link>
           </motion.div>
         </div>
